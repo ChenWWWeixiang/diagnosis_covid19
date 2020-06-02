@@ -1,0 +1,57 @@
+title = "covid19 PyTorch"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = "4"
+loadpretrainedmodel = true
+random_seed = true
+pretrainedmodelpath = 'weights/weak_super.pt'
+use_3d = false
+use_lstm=false
+use_slice=true
+use_plus=false
+use25d=false
+plus_as_input=false
+mod='all'#'ab
+class_num=4
+
+[input]
+batchsize = 32
+numworkers = 8
+shuffle = true
+
+[model]
+type = "Finetune-label"
+inputdim = 256
+hiddendim = 256
+numclasses = 2
+numlstms = 2
+
+[training]
+train = true
+epochs = 20
+startepoch = 1
+statsfrequency = 3000
+data_root = ''#useless and used as ages_gender.txt path
+index_root = 'data/txt/train_allin.txt'
+padding = 35
+learningrate = 1e-5
+momentum = 0.95
+weightdecay = 0.05
+save_prefix = "weights/weak_super"
+
+[validation]
+validate = true
+data_root = ''
+index_root = ''
+padding = 45
+saveaccuracy = false
+saves='re/all_weak_super.npy'
+
+[test]
+test = false
+data_root = '/mnt/data6/lung_jpgs_with_SEG'
+index_root = 'data/txt/2train_lidc_ild_train.txt'
+padding = 45
+saveaccuracy = false

@@ -1,0 +1,57 @@
+title = "GetAbnormal PyTorch"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = "7"
+loadpretrainedmodel = true
+random_seed = true
+pretrainedmodelpath = '../weights/locating.pt'
+use_3d = false
+use_lstm=false
+use25d=false
+use_slice=true
+use_plus=false
+plus_as_input=false
+mod='ab'
+class_num=2
+
+[input]
+batchsize = 32
+numworkers = 8
+shuffle = true
+
+[model]
+type = "Finetune-label"
+inputdim = 256
+hiddendim = 256
+numclasses = 2
+numlstms = 2
+
+[training]
+train = true
+epochs = 100
+startepoch = 0
+statsfrequency = 1000
+data_root = '../all_ages_genders.txt'
+index_root = '../data/txt/train_abnormal.txt'
+padding = 35
+learningrate = 1e-6
+momentum = 0.995
+weightdecay = 0.05
+save_prefix = "../weights/locating"
+
+[validation]
+validate = true
+data_root = '../all_ages_genders.txt'
+index_root = '../data/txt/test_abnormal.txt'
+padding = 35
+saveaccuracy = false
+
+
+[test]
+test = false
+data_root = '/mnt/data6/lung_jpgs_with_SEG'
+index_root = 'data/txt/2train_lidc_ild_train.txt'
+padding = 35
+saveaccuracy = false

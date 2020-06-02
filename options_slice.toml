@@ -1,0 +1,53 @@
+title = "covid19 PyTorch"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = "3"
+loadpretrainedmodel = true
+random_seed = true
+#pretrainedmodelpath = 'key_result/model/locating.pt'
+pretrainedmodelpath = 'weights/locate.pt'
+use_3d = false
+use_lstm=false
+use_slice=true
+use_plus=false
+use25d=false
+plus_as_input=false
+mod='slice'#'ab
+class_num=2
+
+[input]
+batchsize = 16
+numworkers = 8
+shuffle = true
+
+
+[training]
+train = false
+epochs = 11
+startepoch = 1
+statsfrequency = 3000
+data_root = ''#useless and used as ages_gender.txt path
+index_root = 'data/txt/train_slice.txt'
+padding = 35
+learningrate = 5e-6
+momentum = 0.95
+weightdecay = 0.05
+save_prefix = "weights/locate"
+
+[validation]
+validate = false
+data_root = ''
+index_root = 'data/txt/train_slice.txt'
+padding = 0
+saveaccuracy = false
+saves='re/slice_locate.npy'
+
+[test]
+test = true
+data_root = ''
+index_root = 'data/txt/test_slice.txt'
+padding = 45
+saveaccuracy = false
+saves='re/slice_locate_unsper.npy'

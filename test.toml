@@ -1,0 +1,58 @@
+title = "covid19 PyTorch test"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = "6"
+loadpretrainedmodel = true
+pretrainedmodelpath = 'weights/weak_super.pt'
+random_seed = true
+use_3d = false
+use_lstm=false
+use_slice=true
+use_plus=false
+use25d=false
+class_num=4
+mod='xct'
+plus_as_input=false
+
+[input]
+batchsize = 32
+numworkers = 8
+shuffle = true
+
+[model]
+type = "Finetune-label"
+inputdim = 256
+hiddendim = 256
+numclasses = 2
+numlstms = 2
+
+[training]
+train = true
+epochs = 50
+startepoch = 0
+statsfrequency = 1000
+data_root = ''#useless and used as ages_gender.txt path
+index_root = ''
+padding = 35
+learningrate = 1e-5
+momentum = 0.95
+weightdecay = 0.05
+save_prefix = ""
+
+[validation]
+validate = true
+data_root = ''
+index_root = ''
+padding = 35
+saveaccuracy = false
+saves='re/xct2.npy'
+
+
+[test]
+test = false
+data_root = ''
+index_root = ''
+padding = 35
+saveaccuracy = false
