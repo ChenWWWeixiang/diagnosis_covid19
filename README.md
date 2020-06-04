@@ -8,7 +8,7 @@ as presented in our paper: Development and Evaluation of an AI System for COVID-
 
 About the Project
 ------
-Early detection of COVID-19 based on chest CT will enable timely treatment of patients and help control the spread of the disease. With rapid spreading of COVID-19 in many countries, however, CT volumes of suspicious patients are increasing at a speed much faster than the availability of human experts. We proposed an artificial intelligence (AI) system for fast COVID-19 detection and performed extensive statistical analysis of CTs of COVID-19 based on the AI system. We developed and evaluated our system on a large dataset with more than 10 thousand CT volumes from COVID-19, influenza-A/B, non- viral community acquired pneumonia (CAP) and non-pneumonia subjects. In such a difficult multi-class diagnosis task, our deep convolutional neural network-based system is able to achieve an area under the receiver operating characteristic curve (AUC) of 97.17%, a sensitivity of 90.19%, and a specificity of 95.76% for COVID-19 on internal test cohort of 3,203 scans and AUC of 97.77% on the publicly available CC-CCII database with 1,943 test samples. In a reader study involving five radiologists, the AI system outperforms all of radiologists in more challenging tasks at a speed of two orders of magnitude above them. Diagnosis performance of chest x-ray (CXR) is compared
+Early detection of COVID-19 based on chest CT will enable timely treatment of patients and help control the spread of the disease. With rapid spreading of COVID-19 in many countries, however, CT volumes of suspicious patients are increasing at a speed much faster than the availability of human experts. We proposed an artificial intelligence (AI) system for fast COVID-19 detection and performed extensive statistical analysis of CTs of COVID-19 based on the AI system. We developed and evaluated our system on a large dataset with more than 10 thousand CT volumes from COVID-19, influenza-A/B, non- viral community acquired pneumonia (CAP) and non-pneumonia subjects. In such a difficult multi-class diagnosis task, our deep convolutional neural network-based system is able to achieve an area under the receiver operating characteristic curve (AUC) of 97.17%, a sensitivity of 90.19%, and a specificity of 95.76% for COVID-19 on internal test cohort of 3,203 scans and AUC of 97.77% on the publicly available CC-CCII database with 1,943 test samples. In a reader study involving five radiologists, the AI system outperforms all of radiologists in more challenging tasks at a speed of two orders of magnitude above them. Diagnosis performance of chest x-ray (CXR) is compared.
 
 
 Methods
@@ -33,9 +33,11 @@ In the reader study, the diagnostic accuracy of the AI system outperformed exper
    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_influenza_covid.jpg)
     
    CXR is also considered as a possible way to diagnose COVID-19. And after using t-SNE, we found that COVID-19 subjects were mapped to more than one clusters.Samples in left cluster of COVID-19 were most in early and mild stage which have small GGO with nearly round shape. Samples in right cluster had larger lesion and some of them had crazy paving patterns. Fibration and consolidation could be found in the upper cluster whose sizes of lesion were generally between lefts and rights. Although visualization by t-SNE was a conjecture for extracting features from the network, we can clearly find that patients of COVID-19 may be divided into different subclasses.
+   
    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_xct.jpg)
    
    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/t-SNE-map.jpg)
+   
 Guidance to Use
 -------
 ###  Environment
