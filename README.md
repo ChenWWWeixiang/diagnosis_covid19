@@ -30,7 +30,7 @@ In the reader study, the diagnostic accuracy of the AI system outperformed exper
  
   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_cap_covid.jpg)
   
-    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_influenza_covid.jpg)
+   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_influenza_covid.jpg)
     
    CXR is also considered as a possible way to diagnose COVID-19. And after using t-SNE, we found that COVID-19 subjects were mapped to more than one clusters.Samples in left cluster of COVID-19 were most in early and mild stage which have small GGO with nearly round shape. Samples in right cluster had larger lesion and some of them had crazy paving patterns. Fibration and consolidation could be found in the upper cluster whose sizes of lesion were generally between lefts and rights. Although visualization by t-SNE was a conjecture for extracting features from the network, we can clearly find that patients of COVID-19 may be divided into different subclasses.
    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_xct.jpg)
