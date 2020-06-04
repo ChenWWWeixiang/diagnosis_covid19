@@ -15,12 +15,16 @@ Methods
 ----------
  We proposed a deep-learning based AI system for COVID-19 diagnosis, which directly takes CT data as input, performs lung segmentation, COVID-19 diagnosis and COVID-infectious slices locating. In addition, we hope that the diagnosis results of AI system can be quantitatively explained in the original image to alleviate the drawback of deep neural networks as a black box.
  
+ ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/fw.jpg)
+ 
  We developed and evaluated a deep learning-based COVID-19 diagnosis system, using multi-class multi-center data, which includes 10,250 CT scans from 7,917 subjects consisting of COVID-19, CAP, influenza and non-pneumonia. CAP subjects included in our database were all non-viral CAP. Data were collected in three different centers in Wuhan, and from three publicly available databases, LIDC-IDRI, Tianchi-Alibaba, and CC-CCII.
  
 
  Results 
 ----------
+ ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_4c.jpg)
 
+The trained AI system was evaluated on the test cohort. We used the receiver operating characteristic (ROC) curves to evaluate the diagnostic accuracy. On the test cohort, the ROC curve showed AUC of four categories were respectively 0.9752 (for non-pneumonia), 0.9804 (for CAP), 0.9885 (for influenza) and 0.9745 (for COVID-19). Besides, sensitivity and specificity of COVID-19 were 0.9019 and 0.9576.
   
 Guidance to Use
 -------
