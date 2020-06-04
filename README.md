@@ -63,7 +63,17 @@ xlrd==1.2.0
 
 run ```pip install -r requirements.txt``` to install all above packages.
 
+Usage
+----
+1. Lung area segmentation: prepare your own data in nii format. Run ```segmentation/predict.py``` to get segmentations.
+2. Get train list and test list: Run ```data/get_test_list.py``` to divide dataset into training and test.
+3. Get training jpgs: Run ```data/get_train_jpgs.py``` to extract jpgs from training cohort.
+4. Get training jpg list: Run ```data/get_set_seperate_jpg.py``` to get the training file lists for training.
+5. Start training diagnosis net: run ```main.py``` to start training and test. Training parameters are listed in options_lip.toml.
+6. Evaluate diagnosis net:run ```testengine.py``` to test. Test parameters are listed in test.toml.
 
+*. Figure plting tools: in result_plt.
+*. Radiomics tools: in radiomics.
 
 Citation
 ----

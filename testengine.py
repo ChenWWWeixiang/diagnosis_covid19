@@ -152,7 +152,7 @@ class Validator():
         self.asinput = options['general']['plus_as_input']
         mod=options['general']['mod']
         #datalist = args.imgpath
-        #masklist =args.maskpath
+        #masklidata preparationst =args.maskpath
         self.savenpy = savenpy
         if mod=='healthy':
             f='data/lists/reader_healthy_vs_ill.list'
