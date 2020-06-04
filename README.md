@@ -36,7 +36,7 @@ In the reader study, the diagnostic accuracy of the AI system outperformed exper
    
    ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_xct.jpg)
    
-   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/t-SNE-map.jpg)
+   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/t-sne-map.jpg)
    
 Guidance to Use
 -------
@@ -76,6 +76,7 @@ Usage
 6. Evaluate diagnosis net:run ```testengine.py``` to test. Test parameters are listed in test.toml.
 
 *. Figure plting tools: in result_plt.
+
 *. Radiomics tools: in radiomics.
 
 Citation
