@@ -34,9 +34,7 @@ In the reader study, the diagnostic accuracy of the AI system outperformed exper
     
    CXR is also considered as a possible way to diagnose COVID-19. And after using t-SNE, we found that COVID-19 subjects were mapped to more than one clusters.Samples in left cluster of COVID-19 were most in early and mild stage which have small GGO with nearly round shape. Samples in right cluster had larger lesion and some of them had crazy paving patterns. Fibration and consolidation could be found in the upper cluster whose sizes of lesion were generally between lefts and rights. Although visualization by t-SNE was a conjecture for extracting features from the network, we can clearly find that patients of COVID-19 may be divided into different subclasses.
    
-   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_xct.jpg)
-   
-   ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/t-sne-map.jpg)
+
    
 Guidance to Use
 -------
@@ -66,8 +64,8 @@ xlrd==1.2.0
 
 run ```pip install -r requirements.txt``` to install all above packages.
 
-Usage
-----
+###  Usage
+
 1. Lung area segmentation: prepare your own data in nii format. Run ```segmentation/predict.py``` to get segmentations.
 2. Get train list and test list: Run ```data/get_test_list.py``` to divide dataset into training and test.
 3. Get training jpgs: Run ```data/get_train_jpgs.py``` to extract jpgs from training cohort.
