@@ -2,14 +2,12 @@
 
 
 OpenCovidDetector is an opensource COVID-19 diagnosis system implementing on pytorch, which is also 
-as presented in our paper: Development and Evaluation of an AI System for COVID-19 Diagnosis
- (https://www.medrxiv.org/content/10.1101/2020.03.20.20039834v2)
+as presented in our paper: Development and evaluation of an artificial intelligence system for COVID-19 diagnosis. Nat Commun 11, 5088 (2020).(https://doi.org/10.1038/s41467-020-18685-1)
  
 
 About the Project
 ------
-Early detection of COVID-19 based on chest CT will enable timely treatment of patients and help control the spread of the disease. With rapid spreading of COVID-19 in many countries, however, CT volumes of suspicious patients are increasing at a speed much faster than the availability of human experts. We proposed an artificial intelligence (AI) system for fast COVID-19 detection and performed extensive statistical analysis of CTs of COVID-19 based on the AI system. We developed and evaluated our system on a large dataset with more than 10 thousand CT volumes from COVID-19, influenza-A/B, non- viral community acquired pneumonia (CAP) and non-pneumonia subjects. In such a difficult multi-class diagnosis task, our deep convolutional neural network-based system is able to achieve an area under the receiver operating characteristic curve (AUC) of 97.17%, a sensitivity of 90.19%, and a specificity of 95.76% for COVID-19 on internal test cohort of 3,203 scans and AUC of 97.77% on the publicly available CC-CCII database with 1,943 test samples. In a reader study involving five radiologists, the AI system outperforms all of radiologists in more challenging tasks at a speed of two orders of magnitude above them. Diagnosis performance of chest x-ray (CXR) is compared.
-
+Early detection of COVID-19 based on chest CT enables timely treatment of patients and helps control the spread of the disease. We proposed an artificial intelligence (AI) system for rapid COVID-19 detection and performed extensive statistical analysis of CTs of COVID-19 based on the AI system. We developed and evaluated our system on a large dataset with more than 10 thousand CT volumes from COVID-19, influenza-A/B, non- viral community acquired pneumonia (CAP) and non-pneumonia subjects. In such a difficult multi-class diagnosis task, our deep convolutional neural network-based system is able to achieve an area under the receiver operating characteristic curve (AUC) of 97.81% for multi-way classification on test cohort of 3,199 scans, AUC of 92.99% and 93.25% on two publicly available datasets, CC-CCII and MosMedData respectively. In a reader study involving five radiologists, the AI system outperforms all of radiologists in more challenging tasks at a speed of two orders of magnitude above them. Diagnosis performance of chest x-ray (CXR) is compared to that of CT. Detailed interpretation of deep network is also performed to relate system outputs with CT presentations.
 
 Methods
 ----------
@@ -24,7 +22,7 @@ Methods
 ----------
  ![image](https://github.com/ChenWWWeixiang/diagnosis_covid19/blob/master/pic/roc_4c.jpg)
 
-The trained AI system was evaluated on the test cohort. We used the receiver operating characteristic (ROC) curves to evaluate the diagnostic accuracy. On the test cohort, the ROC curve showed AUC of four categories were respectively 0.9752 (for non-pneumonia), 0.9804 (for CAP), 0.9885 (for influenza) and 0.9745 (for COVID-19). Besides, sensitivity and specificity of COVID-19 were 0.9019 and 0.9576.
+The trained AI system was evaluated on the test cohort. We used the receiver operating characteristic (ROC) curves to evaluate the diagnostic accuracy. On the test cohort, the ROC curve showed AUC of four categories were respectively 0.9752 (for non-pneumonia), 0.9804 (for CAP), 0.9885 (for influenza) and 0.9745 (for COVID-19). Besides, sensitivity and specificity for COVID-19 were 0.8703 and 0.9660, and the multi-way AUC was 0.9781
   
 In the reader study, the diagnostic accuracy of the AI system outperformed experienced radiologists in two tasks from the outbreak center, with AUC of 0.9869, 0.9727, 0.9585 separately for pneumonia-or-non-pneumonia, CAP-or-COVID-19 and influenza-or-COVID-19 tasks.
  
@@ -86,7 +84,7 @@ Citation
 If you find this project helpful, please cite our paper:
 ```
 @article {OpenCovidDetector,
-	author = {Jin, Cheng and Chen, Weixiang and Cao, Yukun and Xu, Zhanwei and Zhang, Xin and Deng, Lei and Zheng, Chuansheng and Zhou, Jie and Shi, Heshui and Feng, Jianjiang},
-	title = {Development and Evaluation of an AI System for COVID-19 Diagnosis},
-	year = {2020}, doi = {10.1101/2020.03.20.20039834},journal = {medRxiv}}
+	author = {Jin, Cheng and Chen, Weixiang and Cao, Yukun and Xu, Zhanwei and Tan, Zimeng and Zhang, Xin and Deng, Lei and Zheng, Chuansheng and Zhou, Jie and Shi, Heshui and Feng, Jianjiang},
+	title = {Development and evaluation of an artificial intelligence system for COVID-19 diagnosis},
+	year = {2020}, doi = {10.1038/s41467-020-18685-1},journal = {Nature Communications}}
 ```
